@@ -1,4 +1,4 @@
 @echo off & setlocal enabledelayedexpansion
 set/p number=
-copy Build.cpp P%number%.cpp > nul
+if not exist P%number%.cpp (copy Build.cpp P%number%.cpp)
 start P%number%.cpp
